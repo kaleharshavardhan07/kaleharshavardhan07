@@ -6,6 +6,7 @@
 # 💫 About Me:
 <br>🌱 I’m currently learning c++ , kotlin<br>
 My Portfolio Page : https://kaleharshavardhan07.github.io/kaleharshavardhan07/ <br>
+link : [My Bio](https://kaleharshavardhan07.github.io/kaleharshavardhan07/)
 <br>📫 you can contact me on my mail id: kaleharshavardhan07@gmail.com
 
 
