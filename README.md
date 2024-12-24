@@ -4,7 +4,7 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaleharshavardhan07&label=Profile%20views&color=0e75b6&style=flat" alt="kaleharshavardhan07" /> </p>
 
 # 💫 About Me:
-<br>🌱 I’m currently learning c++ , MySQL & dart<br>
+<br>🏛️ Currently pursuing B.Tech in Computer Engineering (Third Year) at COEP Technological University, Pune - one of India's premier engineering institutions.<br>
 <br>
 link : [My Port-folio ](https://kaleharshavardhan07.github.io/kaleharshavardhan07/) <br>
 <br>📫 you can contact me on my mail id: kaleharshavardhan07@gmail.com
