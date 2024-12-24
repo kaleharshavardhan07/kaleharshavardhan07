@@ -22,6 +22,27 @@
 <a href="https://www.leetcode.com/kaleharshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="kaleharshavardhan07" height="30" width="40" /></a>
 <a href="https://auth.geeksforgeeks.org/user/kaleharshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="kaleharshavardhan07" height="30" width="40" /></a>
 </p>
+### 🛠️ Tech Stack
+
+```
+
+Languages:        C | C++ | Python | JavaScript | Java | Dart
+
+Web Dev:          Frontend: HTML5 | CSS3 | React
+
+                 Backend: Node.js | Django | Flask
+
+Mobile Dev:       Flutter
+
+Database:         MySQL | MongoDB
+
+Tools:           Git | VS Code | Linux
+
+Currently        DSA | DBMS | OS | Computer Networks
+
+Learning:        System Design | Cloud Computing
+
+```
 
 # 💻 Tech Stack:
 
