@@ -15,7 +15,8 @@ body {
     line-height: 1.5;
     color: #a4a0a0;
     /* background-color:#0b1527; */
-    background-color:#061632;
+    /* background-color:#061632; */
+    background-color: #0f0f0f;
 
     font-family: 'Nunito Sans', sans-serif
 }
@@ -4850,7 +4851,8 @@ a img {
 #particles-js {
     background: #1488CC;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    background: linear-gradient(to right, #000000, #10212b);
+    /* background: -webkit-linear-gradient(to right, #2B32B2, #1488CC); */
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2B32B2, #1488CC);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
