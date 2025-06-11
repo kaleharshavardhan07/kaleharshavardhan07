@@ -460,7 +460,7 @@ body {
 
 /* Social Links Section */
 .social-section {
-  width: 90%;
+  /* width: 90%; */
   max-width: 1200px;
   margin: 4rem auto;
   padding: 3rem 2rem;
