@@ -1,282 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Metadata of the Webpage -->
-  <!-- Character-set Metadata -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Viewport Metadata -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Description Metadata-->
-  <meta name="description" content="Portfolio Website" />
-  <!-- Author Metadata -->
-  <meta name="author" content="Harshavardhan Kale" />
-  <!-- Keyword Metadata -->
-  <meta name="description"
-    content="Harshavardhan Prataprao Kale's portfolio website. Currently studying Computer Engineering at COEP Technological University, Pune." />
-  <meta name="keywords"
-    content="Harshavardhan Prataprao Kale, Harshavardhan Kale, COEP Technological University, Computer Engineering, Pune, COEP, Engineering Student, Portfolio, Harshavardhan Prataprao Kale COEP" />
-  <!-- Webpage Logo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshavardhan Kale - Software Engineer</title>
+    <meta name="description" content="Harshavardhan Prataprao Kale - Software Engineer Portfolio. Computer Engineering student at COEP Technological University, Pune.">
+    <meta name="keywords" content="Harshavardhan Kale, Software Engineer, Computer Engineering, COEP, Pune, Portfolio">
+    <meta name="author" content="Harshavardhan Kale">
+    
+    <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <!-- Webpage Title -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Webpage Title -->
-  <title>Harshavardhan Kale</title>
-  <!-- Import CSS: Main Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
    <link rel="stylesheet" href="./assets/css/icon.css">
-  <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 
-<body>
-  <div id="particles-js">
-    <div class="header">
-      <h1>
-        <span class="site-title">HARSHAVARDHAN KALE</span>
-        <span class="site-description">Programmer • Web Developer </span>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">HK</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Harshavardhan Kale</span>
+                        <span class="title">Software Engineer</span>
       </h1>
-      <div class="header-icons">
-        <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/kaleharshavardhan07/">
-          <i class="icon fa fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a aria-label="My Github Profile" target="_blank" href="https://github.com/kaleharshavardhan07">
-          <i class="icon fa fa-github" aria-hidden="true"></i>
-        </a>
-        <a aria-label="My Résumé" target="_blank" href="#">
-          <i class="icon fa fa-user" aria-hidden="true"></i>
-        </a>
-        <a aria-label="Send Email" href="mailto:kaleharshavardhan07@gmail.com" target="_blank"><i
-            class="icon fa fa-envelope"></i></a>
-      </div>
-      <div class="header-links">
-        <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#projects" data-scroll>Projects</a>
+                    <p class="hero-description">
+                        Passionate Computer Engineering student at COEP Technological University, Pune. 
+                        Building innovative solutions with modern technologies.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="./assets/filedata/Harshavardhan_kale_Btech_HSBC.pdf" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="./assets/img/jpg/image.png" alt="Harshavardhan Kale" class="profile-image">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <a href="#about" class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
       </div>
     </div>
-    <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+        <div class="hero-background">
+            <div class="particles"></div>
   </div>
+    </section>
 
   <!-- About Section -->
-  <section id="about">
-    <!-- User Introduction-->
-    <div class="user-details">
-      <h1>About Me</h1>
-      <picture>
-        <source type="image/png" srcset="./assets/img/jpg/image.png" alt="Professional Me" width="20%" height="20%" />
-        <img src="./assets/img/jpg/image.png" alt="Me" width="20%" class="profile-image" />
-      </picture>
-      <p class="about-text">
-        I'm <b>Harshavardhan Prataprao Kale</b>, a third-year <b>Computer Engineering</b> student at <b>COEP
-          Technological University, Pune</b>. I have strong programming skills in <b>C++</b>, <b>C</b>, and
-        <b>Python</b>, and experience in web development. Passionate about machine learning,
-        I'm committed to staying updated with technology and eager to apply my skills in professional projects.
-      </p>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm <strong>Harshavardhan Prataprao Kale</strong>, a third-year <strong>Computer Engineering</strong> 
+                        student at <strong>COEP Technological University, Pune</strong>. With a strong foundation in 
+                        programming languages like <strong>C++</strong>, <strong>C</strong>, and <strong>Python</strong>, 
+                        I've developed expertise in both front-end and back-end development.
+                    </p>
+                    <p>
+                        My passion lies in creating innovative solutions and staying at the forefront of technology. 
+                        I'm particularly interested in machine learning and web development, constantly exploring new 
+                        frameworks and methodologies to enhance my skills.
+                    </p>
+                    <div class="about-stats">
+                        
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+    </section>
 
-    <div class="user-details">
-      <h1>Technical Expertise</h1>
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic journey</p>
+            </div>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-degree">B.Tech in Computer Engineering</h3>
+                        <p class="education-institution">COEP Technological University, Pune</p>
+                        <p class="education-duration">Nov 2022 – Jun 2026</p>
+                        <p class="education-description">
+                            Currently pursuing Computer Engineering with focus on software development, 
+                            data structures, algorithms, and modern web technologies.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">Computer Engineering</span>
+                            <span class="highlight-tag">Data Structures</span>
+                            <span class="highlight-tag">Algorithms</span>
+                            <span class="highlight-tag">Database Systems</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-degree">Higher Secondary Education (12th)</h3>
+                        <p class="education-institution">Samarth Madhyamik va Uchhamadhyamik Vidyalay, Karjat</p>
+                        <p class="education-duration">Jun 2020 – Dec 2021</p>
+                        <p class="education-description">
+                            Completed 12th standard with Science stream, focusing on Mathematics, 
+                            Physics, and Computer Science fundamentals.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">Percentage: 94.83%</span>
+                            <span class="highlight-tag">Science Stream</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-degree">Secondary Education (10th)</h3>
+                        <p class="education-institution">Dynamic English School, Karjat</p>
+                        <p class="education-duration">Jun 2018 – May 2019</p>
+                        <p class="education-description">
+                            Completed secondary education with strong foundation in core subjects.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">Percentage: 91.20%</span>
+                            <span class="highlight-tag">Core Subjects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="experience-content">
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="experience-content-wrapper">
+                        <div class="experience-details">
+                            <h3 class="experience-title">Product Development Intern</h3>
+                            <p class="experience-company">Schaeffler Technology Solution</p>
+                            <p class="experience-duration">Jun 2025 – Aug 2025</p>
+                            <p class="experience-description">
+                                Developed automated PowerShell scripts for server configuration, reducing provisioning time from days to few hours. 
+                                Standardized environment configuration across 4+ servers, reducing deployment failures by 40%.
+                            </p>
+                            <div class="experience-tech">
+                                <span class="tech-tag">PowerShell</span>
+                                <span class="tech-tag">Server Configuration</span>
+                                <span class="tech-tag">Automation</span>
+                                <span class="tech-tag">Deployment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="experience-content-wrapper">
+                        <div class="experience-details">
+                            <h3 class="experience-title">Lead Developer Intern</h3>
+                            <p class="experience-company">Mirai (Startup, BuildUp Internships)</p>
+                            <p class="experience-duration">Dec 2025 – May 2025</p>
+                            <p class="experience-description">
+                                Led a 4-member development team to create "Mirai" — a MERN-based career guidance platform. 
+                                Integrated strength-based assessment, career domain recommendations, and real-time analytics dashboards. 
+                                Increased user engagement by 35% during pilot testing with 200+ students.
+                            </p>
+                            <div class="experience-tech">
+                                <span class="tech-tag">MERN Stack</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Team Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
-    <div class="user">
-      <!-- Technology Stack #1: Languages -->
-      <div class="tech">
-        <h2>Languages</h2>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+    </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
         <i class="devicon-cplusplus-plain colored"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-c-plain colored"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
       </div>
 
-      <!-- Technology Stack #2: Front-End -->
-      <div class="tech">
-        <h2>Front-End</h2>
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
         <i class="devicon-react-plain-wordmark colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-html5-plain-wordmark colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-css3-plain-wordmark colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
       </div>
 
-      <!-- Technology Stack #3: Back-End -->
-      <div class="tech">
-        <h2>Back-End</h2>
+                <div class="skill-category">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
         <i class="devicon-nodejs-plain colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-django-plain colored"></i>
+                            <span>Django</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-flask-original-wordmark"></i>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
         <i class="devicon-mongodb-plain-wordmark colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-mysql-plain-wordmark colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
       </div>
 
-      <!-- Technology Stack #4: Tools -->
-      <div class="tech">
-        <h2>Tools</h2>
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
         <i class="devicon-git-plain-wordmark colored"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-github-original-wordmark"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
         <i class="devicon-visualstudio-plain colored"></i>
-        <i class="devicon-github-original-wordmark"></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
       </div>
     </div>
   </section>
 
-  <!-- Enhanced Projects Section -->
-  <section id="projects">
-    <div class="user-details">
-      <h1>Featured Projects</h1>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
     </div>
-
     <div class="projects-grid">
-      <!-- Project 1: College Social Network -->
+                <!-- Project 1 -->
       <div class="project-card">
-        <img src="./assets/img/jpg/project1.png" alt="College Social Network" class="project-image">
-        <h3 class="project-title">College Social Network</h3>
-        <div class="tech-stack">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/cpplogo.png" alt="Database Engine in C++" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/kaleharshavardhan07/" 
+                                   target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+        <h3 class="project-title">Database Engine in C++</h3>
+                        <p class="project-description">
+                            Designed a SQL-compatible engine supporting CRUD, B-tree indexing, and write-ahead logging. 
+                            Achieved 3K QPS and 70% faster recovery after crashes. Built with C++ and Crow Microframework.
+                        </p>
+                        <div class="project-tech">
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">B-tree Indexing</span>
+          <span class="tech-tag">Crow Microframework</span>
+        </div>
+                    </div>
+                </div>
+
+                                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/project1.png" alt="Coep-connect — Flask Web App" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/kaleharshavardhan07/COEP_CONNECT-RPPOOP_Project/blob/main/README.md" 
+                                   target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+        <h3 class="project-title">Coep-connect — Flask Web App</h3>
+                        <p class="project-description">
+                            Developed a Flask-based social media platform for students to connect within the college community. 
+                            Enabled posting of polls with options to post under real name or anonymously. Built a unique "Connect to People" feature.
+                        </p>
+                        <div class="project-tech">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">Flask</span>
           <span class="tech-tag">MongoDB</span>
-          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">HTML/CSS/JavaScript</span>
         </div>
-        <p class="project-description">
-          A Flask-based web application for connecting students within a college community. Features include user
-          authentication, creating posts, connecting with users, and participating in polls.
-        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/ml.jpeg" alt="Sentiment Analysis — ML Model" class="project-image">
+                        <div class="project-overlay">
         <div class="project-links">
-          <a class="project-link" target="_blank"
-            href="https://github.com/kaleharshavardhan07/COEP_CONNECT-RPPOOP_Project/blob/main/README.md">
-            <i class="fab fa-github"></i> View Code
+                                <a href="https://github.com/kaleharshavardhan07/" 
+                                   target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
+                    </div>
+                    <div class="project-content">
+        <h3 class="project-title">Sentiment Analysis — ML Model</h3>
+                        <p class="project-description">
+                            Built a multi-class sentiment classifier (positive/neutral/negative) achieving 85% accuracy using Logistic 
+                            Regression on balanced Twitter data. Implemented with NLTK, Scikit-learn, and TF-IDF/CountVectorizer.
+                        </p>
+                        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">NLTK</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">Machine Learning</span>
+        </div>
+                    </div>
+        </div>
 
-      <!-- Project 2: Flutter App EXPITA-O -->
-      <div class="project-card">
-        <img src="./assets/img/jpg/expito.png" alt="Flutter App EXPITA-O" class="project-image">
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/att.png" alt="Automated Attendance System" class="project-image">
+                        <div class="project-overlay">
+        <div class="project-links">
+                                <a href="https://github.com/kaleharshavardhan07/" 
+                                   target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+                    </div>
+                    <div class="project-content">
+        <h3 class="project-title">Automated Attendance System with Facial Recognition</h3>
+                        <p class="project-description">
+                            Built a full-stack system for automated attendance using real-time face detection. 
+                            Integrated role-based access control for teachers and administrators with MongoDB backend.
+                        </p>
+                        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">Face Recognition</span>
+          <span class="tech-tag">MongoDB</span>
+        </div>
+                    </div>
+        </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/expito.png" alt="EXPITA-O Expense Manager" class="project-image">
+                        <div class="project-overlay">
+        <div class="project-links">
+                                <a href="./assets/filedata/app-release.apk" download="Expito.apk" class="project-link">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+                    </div>
+                    <div class="project-content">
         <h3 class="project-title">EXPITA-O Expense Manager</h3>
-        <div class="tech-stack">
+                        <p class="project-description">
+                            An expense management app with data visualization using graphs and automated suggestions 
+                            using Gemini API. Built with Flutter and Dart for cross-platform compatibility.
+                        </p>
+                        <div class="project-tech">
           <span class="tech-tag">Flutter</span>
           <span class="tech-tag">Dart</span>
           <span class="tech-tag">Hive</span>
           <span class="tech-tag">Gemini API</span>
         </div>
-        <p class="project-description">
-          An expense management app with data visualization using graphs and automated suggestions using Gemini API.
-          Built with Flutter and Dart for cross-platform compatibility.
-        </p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/cpplogo.png" alt="Multithreaded File Downloader" class="project-image">
+                        <div class="project-overlay">
         <div class="project-links">
-          <a class="project-link" target="_blank" href="./assets/filedata/app-release.apk" download="Expito.apk">
-            <i class="fas fa-download"></i> Download APK
-          </a>
-          <a class="project-link" target="_blank" href="https://github.com/kaleharshavardhan07/">
-            <i class="fab fa-github"></i> View Code
+                                <a href="https://github.com/kaleharshavardhan07/Multi_thread_File_downloader/blob/main/readme.md" 
+                                   target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
-
-      <!-- Project 3: Multithreading Downloader -->
-      <div class="project-card">
-        <img src="./assets/img/jpg/cpplogo.png" alt="Multithreading Downloader" class="project-image">
+                    </div>
+                    <div class="project-content">
         <h3 class="project-title">Multithreaded File Downloader</h3>
-        <div class="tech-stack">
+                        <p class="project-description">
+                            A C++ multithreaded file downloader that utilizes the cURL library to download large files 
+                            in parts concurrently and merge them for greater download speeds.
+                        </p>
+                        <div class="project-tech">
           <span class="tech-tag">C++</span>
           <span class="tech-tag">cURL</span>
           <span class="tech-tag">Threading</span>
           <span class="tech-tag">Networking</span>
         </div>
-        <p class="project-description">
-          A C++ multithreaded file downloader that utilizes the cURL library to download large files in parts
-          concurrently and merge them for greater download speeds.
-        </p>
-        <div class="project-links">
-          <a class="project-link" target="_blank"
-            href="https://github.com/kaleharshavardhan07/Multi_thread_File_downloader/blob/main/readme.md">
-            <i class="fab fa-github"></i> View Code
-          </a>
+                    </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Social Links Section -->
-  <section id="social" class="social-section">
-    <h2>Connect With Me</h2>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to collaborate? Let's connect!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>kaleharshavardhan07@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Connect with me</h3>
     <div class="social-grid">
-      <div class="social-card">
-        <a href="https://linkedin.com/in/kaleharshavardhan07" target="_blank" class="social-link">
-          <div class="social-icon linkedin">
+                        <a href="https://linkedin.com/in/kaleharshavardhan07" target="_blank" class="social-link linkedin">
             <i class="fab fa-linkedin"></i>
-          </div>
-          <div class="social-title">LinkedIn</div>
-        </a>
-      </div>
-
-      <div class="social-card">
-        <a href="https://github.com/kaleharshavardhan07" target="_blank" class="social-link">
-          <div class="social-icon github">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/kaleharshavardhan07" target="_blank" class="social-link github">
             <i class="fab fa-github"></i>
-          </div>
-          <div class="social-title">GitHub</div>
-        </a>
-      </div>
-
-      <div class="social-card">
-        <a href="https://leetcode.com/kaleharshavardhan07" target="_blank" class="social-link">
-          <div class="social-icon leetcode">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://leetcode.com/kaleharshavardhan07" target="_blank" class="social-link leetcode">
             <i class="fas fa-code"></i>
-          </div>
-          <div class="social-title">LeetCode</div>
-        </a>
-      </div>
-
-      <div class="social-card">
-        <a href="https://www.hackerrank.com/profile/Harshavardhan07" target="_blank" class="social-link">
-          <div class="social-icon hackerrank">
+                            <span>LeetCode</span>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/Harshavardhan07" target="_blank" class="social-link hackerrank">
             <i class="fas fa-terminal"></i>
-          </div>
-          <div class="social-title">HackerRank</div>
-        </a>
-      </div>
-
-      <div class="social-card">
-        <a href="https://facebook.com/kaleharshavardhan07" target="_blank" class="social-link">
-          <div class="social-icon facebook">
+                            <span>HackerRank</span>
+                        </a>
+                        <a href="https://facebook.com/kaleharshavardhan07" target="_blank" class="social-link facebook">
             <i class="fab fa-facebook"></i>
-          </div>
-          <div class="social-title">Facebook</div>
-        </a>
-      </div>
-
-      <div class="social-card">
-        <a href="https://x.com/Kale_harsh07" target="_blank" class="social-link">
-          <div class="social-icon twitter">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://x.com/Kale_harsh07" target="_blank" class="social-link twitter">
             <i class="fab fa-twitter"></i>
-          </div>
-          <div class="social-title">Twitter</div>
-        </a>
-      </div>
-
-      <div class="social-card">
-        <a href="https://instagram.com/kale_harshavardhan_07" target="_blank" class="social-link">
-          <div class="social-icon instagram">
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://instagram.com/kale_harshavardhan_07" target="_blank" class="social-link instagram">
             <i class="fab fa-instagram"></i>
-          </div>
-          <div class="social-title">Instagram</div>
+                            <span>Instagram</span>
         </a>
+                    </div>
+                </div>
       </div>
     </div>
   </section>
 
-  <!-- Enhanced Footer -->
+    <!-- Footer -->
   <footer class="footer">
+        <div class="container">
     <div class="footer-content">
-      <p class="footer-text">&copy; 2024 <span class="footer-name">Harshavardhan Prataprao Kale</span>. All rights
-        reserved.</p>
+                <p>&copy; 2024 <strong>Harshavardhan Prataprao Kale</strong>. All rights reserved.</p>
+                <!-- <p>Built with ❤️ and lots of ☕</p> -->
+            </div>
     </div>
   </footer>
 
-  <!-- Import JS: Particles Theme -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <!-- Import JS: Sweet Scroll -->
-  <script src="./assets/js/sweet-scroll.min.js"></script>
-  <!-- Import JS: Google Analytics -->
-  <script src="./assets/js/google-analytics.js"></script>
-  <!-- Import JS: Main Script -->
+    <!-- Scripts -->
   <script src="./assets/js/main.js"></script>
 </body>
-
 </html>

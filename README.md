@@ -1,59 +1,161 @@
-<h1 align="center">Hi 👋, I'm Harshavardhan Kale</h1>
-<h3 align="center">A passionate developer from India</h3>
+# Harshavardhan Kale - Software Engineer Portfolio
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=kaleharshavardhan07&label=Profile%20views&color=0e75b6&style=flat" alt="kaleharshavardhan07" /> </p>
+A modern, responsive portfolio website showcasing my skills, projects, and experience as a Computer Engineering student at COEP Technological University, Pune.
 
-# 💫 About Me:
+## 🌟 Features
 
-<br>🏛️ Currently pursuing B.Tech in Computer Engineering (Third Year) at COEP Technological University, Pune - one of India's premier engineering institutions.<br>
-<br>
-💼 Portfolio Website: [My Port-folio ](https://kaleharshavardhan07.github.io/kaleharshavardhan07/) <br>
-<br>📫 you can contact me on my mail id: kaleharshavardhan07@gmail.com
+### Modern Design
+- **Responsive Layout**: Optimized for all devices (desktop, tablet, mobile)
+- **Light/Dark Theme**: Toggle between light and dark themes with persistent preference
+- **Smooth Animations**: CSS transitions and JavaScript-powered scroll animations
+- **Glass Morphism**: Modern backdrop blur effects and transparent cards
+- **Gradient Accents**: Beautiful gradient backgrounds and text effects
 
+### Interactive Elements
+- **Theme Toggle**: Switch between light and dark themes
+- **Mobile Menu**: Hamburger menu for mobile devices
+- **Smooth Scrolling**: Animated navigation between sections
+- **Hover Effects**: Interactive project cards and skill items
+- **Scroll Animations**: Elements animate as they come into view
 
+### Professional Sections
+- **Hero Section**: Eye-catching introduction with profile image
+- **About Me**: Personal introduction and statistics
+- **Technical Skills**: Organized by categories (Languages, Frontend, Backend, etc.)
+- **Featured Projects**: Showcase of key projects with technology tags
+- **Contact Information**: Multiple ways to connect
 
-## 🌐 Socials:
+## 🛠️ Technologies Used
 
-<p align="center">
-<a href="https://twitter.com/kale_harsh07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="kale_harsh07" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/kaleharshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="kaleharshavardhan07" height="30" width="40" /></a>
-<a href="https://fb.com/kaleharshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="kaleharshavardhan07" height="30" width="40" /></a>
-<a href="https://instagram.com/kale_harshavardhan_07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="kale_harshavardhan_07" height="30" width="40" /></a>
-</p>
+### Frontend
+- **HTML5**: Semantic markup
+- **CSS3**: Modern styling with CSS Grid, Flexbox, and Custom Properties
+- **JavaScript (ES6+)**: Interactive functionality and animations
+- **Font Awesome**: Icon library
+- **Devicon**: Technology icons
 
+### Design & UX
+- **Inter Font**: Modern, readable typography
+- **JetBrains Mono**: Monospace font for code elements
+- **CSS Variables**: Theme switching and consistent styling
+- **CSS Grid & Flexbox**: Responsive layouts
+- **Backdrop Filter**: Glass morphism effects
 
-## 👨‍💻 Coding Profile:
-<p align="center">
+## 📱 Responsive Design
 
-<a href="https://www.hackerrank.com/harshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="harshavardhan07" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/kaleharshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="kaleharshavardhan07" height="30" width="40" /></a>
-<a href="https://auth.geeksforgeeks.org/user/kaleharshavardhan07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="kaleharshavardhan07" height="30" width="40" /></a>
+The portfolio is fully responsive and optimized for:
+- **Desktop**: Full layout with side-by-side content
+- **Tablet**: Adjusted grid layouts and spacing
+- **Mobile**: Single-column layout with mobile menu
 
-</p>
+## 🎨 Theme System
 
+### Dark Theme (Default)
+- Deep navy backgrounds
+- Light text colors
+- Blue accent colors
+- Subtle transparency effects
 
-# 💻 Tech Stack:
+### Light Theme
+- Clean white backgrounds
+- Dark text colors
+- Blue accent colors
+- Enhanced readability
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kaleharshavardhan07/portfolio.git
+   ```
+
+2. **Open the project**
+   - Navigate to the project directory
+   - Open `index.html` in your browser
+   - Or serve it using a local server
+
+3. **Customize**
+   - Update personal information in `index.html`
+   - Modify colors in CSS variables
+   - Add your own projects and skills
+   - Replace images with your own
+
+## 📁 Project Structure
 
 ```
-
-👨‍💻 Languages:     C | C++ | Python | JavaScript | Java | Dart
-
-🌐 Web Dev:       Frontend: HTML5 | CSS3 | React
-                 Backend: Node.js | Django | Flask
-
-📱 Mobile Dev:    Flutter
-
-💾 Database:      MySQL | MongoDB
-
-🔧 Tools:         Git | VS Code | Linux
-
-📚 Currently      DSA | DBMS | OS | Computer Networks
-   Learning:      System Design | Cloud Computing
-
+portfolio/
+├── index.html              # Main HTML file
+├── assets/
+│   ├── css/
+│   │   ├── main.css        # Main stylesheet
+│   │   └── icon.css        # Icon styles
+│   ├── js/
+│   │   └── main.js        # JavaScript functionality
+│   ├── img/
+│   │   └── jpg/           # Project images
+│   └── filedata/          # Resume and other files
+└── README.md
 ```
 
-<!-- ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) -->
+## 🎯 Key Features Explained
+
+### Theme Switching
+- Uses CSS custom properties for dynamic theming
+- Theme preference saved in localStorage
+- Smooth transitions between themes
+
+### Mobile Menu
+- Animated hamburger menu
+- Slide-down navigation
+- Touch-friendly interface
+
+### Scroll Animations
+- Elements fade in as they enter viewport
+- Smooth parallax-like effects
+- Performance optimized with debouncing
+
+### Project Showcase
+- Hover effects with overlay
+- Technology tags
+- Direct links to GitHub and live demos
+
+## 🔧 Customization
+
+### Adding New Projects
+1. Copy the project card structure in `index.html`
+2. Update image, title, description, and technology tags
+3. Add your project links
+
+### Modifying Colors
+1. Edit CSS variables in `:root`
+2. Update both light and dark theme variables
+3. Colors will automatically apply throughout the site
+
+### Adding New Skills
+1. Add new skill categories in the skills section
+2. Include appropriate Devicon classes
+3. Update the JavaScript if needed
+
+## 📞 Contact
+
+- **Email**: kaleharshavardhan07@gmail.com
+- **LinkedIn**: [kaleharshavardhan07](https://linkedin.com/in/kaleharshavardhan07)
+- **GitHub**: [kaleharshavardhan07](https://github.com/kaleharshavardhan07)
+- **LeetCode**: [kaleharshavardhan07](https://leetcode.com/kaleharshavardhan07)
+- **HackerRank**: [Harshavardhan07](https://www.hackerrank.com/profile/Harshavardhan07)
+
+## 📄 Resume
+
+Download my resume: [Harshavardhan_kale_Btech_HSBC.pdf](./assets/filedata/Harshavardhan_kale_Btech_HSBC.pdf)
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions, please open an issue.
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+**Built with ❤️ and lots of ☕ by Harshavardhan Kale**
