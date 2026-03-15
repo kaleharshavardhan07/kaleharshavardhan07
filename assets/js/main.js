@@ -1,313 +1,254 @@
-// Modern Portfolio JavaScript
+// Futuristic Portfolio — main.js
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Theme Toggle Functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    const moonIcon = '<i class="fas fa-moon"></i>';
-    const sunIcon = '<i class="fas fa-sun"></i>';
-    
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    body.className = `${savedTheme}-theme`;
-    themeToggle.innerHTML = savedTheme === 'dark' ? moonIcon : sunIcon;
-    
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        body.className = `${newTheme}-theme`;
-        themeToggle.innerHTML = newTheme === 'dark' ? moonIcon : sunIcon;
-        localStorage.setItem('theme', newTheme);
-    });
-    
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    mobileMenuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-        
-        // Animate hamburger menu
-        const spans = mobileMenuToggle.querySelectorAll('span');
-        spans.forEach((span, index) => {
-            if (mobileMenuToggle.classList.contains('active')) {
-                if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                if (index === 1) span.style.opacity = '0';
-                if (index === 2) span.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                span.style.transform = 'none';
-                span.style.opacity = '1';
+(function () {
+    "use strict";
+
+    // ─── Theme Toggle ───────────────────────────────
+    var themeToggle = document.getElementById("themeToggle");
+    var body = document.body;
+
+    function applyTheme(theme) {
+        body.className = theme + "-theme";
+        if (themeToggle) {
+            themeToggle.innerHTML =
+                theme === "dark"
+                    ? '<i class="fas fa-moon"></i>'
+                    : '<i class="fas fa-sun"></i>';
+        }
+        updateNavbar();
+    }
+
+    var saved = localStorage.getItem("portfolioTheme") || "dark";
+    applyTheme(saved);
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            var isLight = body.classList.contains("light-theme");
+            var next = isLight ? "dark" : "light";
+            applyTheme(next);
+            localStorage.setItem("portfolioTheme", next);
+        });
+    }
+
+    // ─── Mobile Menu ────────────────────────────────
+    var mobileBtn = document.getElementById("mobileMenuToggle");
+    var navMenu = document.getElementById("navMenu");
+
+    if (mobileBtn && navMenu) {
+        mobileBtn.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+            var spans = mobileBtn.querySelectorAll("span");
+            var open = navMenu.classList.contains("active");
+            if (spans[0]) spans[0].style.transform = open ? "rotate(45deg) translate(5px,6px)" : "";
+            if (spans[1]) spans[1].style.opacity = open ? "0" : "";
+            if (spans[2]) spans[2].style.transform = open ? "rotate(-45deg) translate(5px,-7px)" : "";
+        });
+    }
+
+    // Close mobile menu on nav click
+    var navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            if (navMenu) navMenu.classList.remove("active");
+            if (mobileBtn) {
+                var spans = mobileBtn.querySelectorAll("span");
+                spans.forEach(function (s) { s.style.transform = ""; s.style.opacity = ""; });
             }
         });
     });
-    
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-            
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            spans.forEach(span => {
-                span.style.transform = 'none';
-                span.style.opacity = '1';
-            });
-        });
-    });
-    
-    // Smooth Scrolling for Navigation Links
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+
+    // ─── Smooth Scroll ──────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener("click", function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            var target = document.querySelector(a.getAttribute("href"));
+            if (target) {
+                window.scrollTo({ top: target.offsetTop - 75, behavior: "smooth" });
             }
         });
     });
-    
-    // Active Navigation Link Highlighting
-    function updateActiveNavLink() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollPos = window.scrollY + 100;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-            
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                if (navLink) navLink.classList.add('active');
-            }
-        });
-    }
-    
-    // Scroll Event Listeners
-    window.addEventListener('scroll', function() {
-        updateActiveNavLink();
-        updateNavbarBackground();
-        animateOnScroll();
-    });
-    
-    // Navbar Background on Scroll
-    function updateNavbarBackground() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            navbar.style.backdropFilter = 'blur(20px)';
+
+    // ─── Navbar background on scroll ────────────────
+    var navbar = document.getElementById("navbar");
+
+    function updateNavbar() {
+        if (!navbar) return;
+        var scrolled = window.scrollY > 50;
+        var isLight = body.classList.contains("light-theme");
+        if (isLight) {
+            navbar.style.background = scrolled ? "rgba(240,244,255,0.97)" : "rgba(240,244,255,0.9)";
+            navbar.style.boxShadow = scrolled ? "0 2px 24px rgba(0,60,200,0.1)" : "none";
         } else {
-            navbar.style.background = 'rgba(15, 23, 42, 0.8)';
-            navbar.style.backdropFilter = 'blur(20px)';
+            navbar.style.background = scrolled ? "rgba(2,8,23,0.97)" : "rgba(2,8,23,0.9)";
+            navbar.style.boxShadow = scrolled ? "0 2px 30px rgba(0,0,0,0.4)" : "none";
         }
     }
-    
-    // Scroll Animations
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.scroll-animate');
-        
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-            
-            if (elementTop < window.innerHeight - elementVisible) {
-                element.classList.add('animate');
+
+    // ─── Active Nav Highlight ───────────────────────
+    var sections = document.querySelectorAll("section[id]");
+
+    function updateActiveNav() {
+        var scrollPos = window.scrollY + 120;
+        sections.forEach(function (sec) {
+            var link = document.querySelector('.nav-link[href="#' + sec.id + '"]');
+            if (!link) return;
+            if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+                navLinks.forEach(function (l) { l.classList.remove("active"); });
+                link.classList.add("active");
             }
         });
     }
-    
-    // Add scroll-animate class to elements
-    const animateElements = document.querySelectorAll('.section-header, .about-content, .skill-category, .project-card, .contact-item, .social-link');
-    animateElements.forEach(element => {
-        element.classList.add('scroll-animate');
+
+    // ─── Scroll Animations ─────────────────────────
+    // Uses IntersectionObserver with a generous fallback
+    var animSelectors = ".scroll-animate, .scroll-animate-left, .scroll-animate-right";
+    var animEls = document.querySelectorAll(animSelectors);
+
+    if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.05, rootMargin: "0px 0px -20px 0px" }
+        );
+        animEls.forEach(function (el, i) {
+            el.style.transitionDelay = (i % 5) * 0.08 + "s";
+            observer.observe(el);
+        });
+    } else {
+        // No IntersectionObserver support — just show everything
+        animEls.forEach(function (el) { el.classList.add("animate"); });
+    }
+
+    // SAFETY FALLBACK: force-reveal everything after 2 seconds no matter what
+    setTimeout(function () {
+        document.querySelectorAll(animSelectors).forEach(function (el) {
+            el.classList.add("animate");
+        });
+    }, 2000);
+
+    // ─── Scroll handler ─────────────────────────────
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(function () {
+                updateNavbar();
+                updateActiveNav();
+                ticking = false;
+            });
+        }
     });
-    
-    // Initial animation check
-    animateOnScroll();
-    
-    // Typing Animation for Hero Title
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
+
+    // ─── Typed Role Effect ──────────────────────────
+    var typedEl = document.getElementById("typed-role");
+    var roles = [
+        "Software Engineer",
+        "Backend Developer",
+        "Systems Programmer",
+        "ML Enthusiast",
+        "Full-Stack Developer"
+    ];
+    var rIdx = 0, cIdx = 0, deleting = false;
+
+    function typeRole() {
+        if (!typedEl) return;
+        var current = roles[rIdx];
+        if (!deleting) {
+            typedEl.textContent = current.substring(0, cIdx + 1);
+            cIdx++;
+            if (cIdx === current.length) {
+                deleting = true;
+                setTimeout(typeRole, 1800);
+                return;
+            }
+        } else {
+            typedEl.textContent = current.substring(0, cIdx - 1);
+            cIdx--;
+            if (cIdx === 0) {
+                deleting = false;
+                rIdx = (rIdx + 1) % roles.length;
             }
         }
-        type();
+        setTimeout(typeRole, deleting ? 50 : 90);
     }
-    
-    // Initialize typing animation when page loads
-    const heroName = document.querySelector('.name');
-    if (heroName) {
-        const originalText = heroName.textContent;
-        setTimeout(() => {
-            typeWriter(heroName, originalText, 150);
-        }, 1000);
+    setTimeout(typeRole, 1200);
+
+    // ─── Particles ──────────────────────────────────
+    var particleBox = document.getElementById("particles");
+
+    // Inject particle animation keyframe
+    var pStyle = document.createElement("style");
+    pStyle.textContent =
+        "@keyframes particle-rise{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(-110vh) rotate(360deg);opacity:0}}";
+    document.head.appendChild(pStyle);
+
+    function spawnParticle() {
+        if (!particleBox) return;
+        var p = document.createElement("div");
+        var size = Math.random() * 3 + 1;
+        var isLight = body.classList.contains("light-theme");
+        var color = isLight
+            ? "rgba(0,119,204," + (Math.random() * 0.25 + 0.05) + ")"
+            : "rgba(0,212,255," + (Math.random() * 0.4 + 0.1) + ")";
+        p.style.cssText =
+            "position:absolute;width:" + size + "px;height:" + size + "px;" +
+            "background:" + color + ";" +
+            "border-radius:50%;left:" + (Math.random() * 100) + "%;" +
+            "top:110%;pointer-events:none;" +
+            "animation:particle-rise " + (Math.random() * 4 + 4) + "s linear forwards;";
+        particleBox.appendChild(p);
+        setTimeout(function () { p.remove(); }, 8500);
     }
-    
-    // Particle Background Animation
-    function createParticle() {
-        const particles = document.querySelector('.particles');
-        if (!particles) return;
-        
-        const particle = document.createElement('div');
-        particle.style.position = 'absolute';
-        particle.style.width = '2px';
-        particle.style.height = '2px';
-        particle.style.background = 'rgba(255, 255, 255, 0.5)';
-        particle.style.borderRadius = '50%';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = '100%';
-        particle.style.animation = `float ${Math.random() * 3 + 2}s linear infinite`;
-        
-        particles.appendChild(particle);
-        
-        setTimeout(() => {
-            particle.remove();
-        }, 5000);
+
+    setInterval(spawnParticle, 500);
+
+    // ─── Stat Counter Animation ─────────────────────
+    if ("IntersectionObserver" in window) {
+        var statObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting && !entry.target.dataset.counted) {
+                    entry.target.dataset.counted = "1";
+                    animateNum(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll(".stat-number, .hero-stat-num").forEach(function (el) {
+            statObs.observe(el);
+        });
     }
-    
-    // Create particles periodically
-    setInterval(createParticle, 300);
-    
-    // Add CSS for particle animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
+
+    function animateNum(el) {
+        var raw = el.textContent;
+        var num = parseFloat(raw.replace(/[^0-9.]/g, ""));
+        var suffix = raw.replace(/[0-9.]/g, "");
+        if (isNaN(num)) return;
+        var isInt = num % 1 === 0;
+        var steps = 50, step = 0;
+        var interval = setInterval(function () {
+            step++;
+            var eased = 1 - Math.pow(1 - step / steps, 3);
+            var cur = num * eased;
+            el.textContent = (isInt ? Math.floor(cur) : cur.toFixed(2)) + suffix;
+            if (step >= steps) {
+                clearInterval(interval);
+                el.textContent = raw;
             }
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Skill Item Hover Effects
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.05)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
-    // Project Card Hover Effects
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
-    // Social Link Hover Effects
-    const socialLinks = document.querySelectorAll('.social-link');
-    socialLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.05)';
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
-    // Contact Form Validation (if you add a contact form later)
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
+        }, 25);
     }
-    
-    // Resume Download Tracking
-    const resumeLink = document.querySelector('a[href*="Harshavardhan_kale_Btech_HSBC.pdf"]');
-    if (resumeLink) {
-        resumeLink.addEventListener('click', function() {
-            // You can add analytics tracking here
-            console.log('Resume downloaded');
-        });
-    }
-    
-    // Performance Optimization: Debounce scroll events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-    
-    // Apply debouncing to scroll events
-    const debouncedScrollHandler = debounce(function() {
-        updateActiveNavLink();
-        updateNavbarBackground();
-        animateOnScroll();
-    }, 10);
-    
-    window.addEventListener('scroll', debouncedScrollHandler);
-    
-    // Preload critical images
-    function preloadImages() {
-        const images = [
-            './assets/img/jpg/image.png',
-            './assets/img/jpg/project1.png',
-            './assets/img/jpg/expito.png',
-            './assets/img/jpg/cpplogo.png'
-        ];
-        
-        images.forEach(src => {
-            const img = new Image();
-            img.src = src;
-        });
-    }
-    
-    preloadImages();
-    
-    // Add loading animation to page
-    window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
-    });
-    
-    // Console welcome message
-    console.log(`
-    🚀 Welcome to Harshavardhan Kale's Portfolio!
-    
-    👨‍💻 Software Engineer | Computer Engineering Student
-    🏫 COEP Technological University, Pune
-    
-    🔗 Connect with me:
-    - LinkedIn: https://linkedin.com/in/kaleharshavardhan07
-    - GitHub: https://github.com/kaleharshavardhan07
-    - Email: kaleharshavardhan07@gmail.com
-    
-    💡 This site is built with modern web technologies
-    and features a responsive design with dark/light themes.
-    `);
-});
+
+    // ─── Init ───────────────────────────────────────
+    updateNavbar();
+    updateActiveNav();
+
+    console.log(
+        "%c🚀 Harshavardhan Kale's Portfolio\n%cSoftware Engineer | COEP Pune | Pine Labs Intern",
+        "font-size:16px;font-weight:bold;color:#00d4ff;",
+        "font-size:12px;color:#a8c5e8;"
+    );
+})();

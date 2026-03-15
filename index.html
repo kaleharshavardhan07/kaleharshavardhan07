@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshavardhan Kale - Software Engineer</title>
+    <title>Harshavardhan Kale — Software Engineer</title>
     <meta name="description"
-        content="Harshavardhan Prataprao Kale - Software Engineer Portfolio. Computer Engineering student at COEP Technological University, Pune.">
-    <meta name="keywords" content="Harshavardhan Kale, Software Engineer, Computer Engineering, COEP, Pune, Portfolio">
+        content="Harshavardhan Prataprao Kale — Software Engineer, Final-year Computer Engineering student at COEP Technological University. Currently interning at Pine Labs.">
+    <meta name="keywords"
+        content="Harshavardhan Kale, Software Engineer, Computer Engineering, COEP, Pune, Portfolio, Pine Labs">
     <meta name="author" content="Harshavardhan Kale">
-<meta name="google-site-verification" content="MSsz7vW0KIu0AQ6psZhKypBdkJ9viF4RMoMD7xEk-cI" />
+    <meta name="google-site-verification" content="MSsz7vW0KIu0AQ6psZhKypBdkJ9viF4RMoMD7xEk-cI">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
 
@@ -17,12 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;500;600;700;900&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -30,13 +32,14 @@
 </head>
 
 <body class="dark-theme">
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <!-- ── Navigation ── -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-text">HK</span>
             </div>
-            <div class="nav-menu">
+            <div class="nav-menu" id="navMenu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#education" class="nav-link">Education</a>
@@ -46,90 +49,181 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ── Hero ── -->
     <section id="home" class="hero">
+        <!-- Background elements -->
+        <div class="hero-bg-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="particles" id="particles"></div>
+
         <div class="hero-container">
             <div class="hero-content">
+                <!-- Text -->
                 <div class="hero-text">
+                    <div class="hero-chip">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Pune, India · Open to Opportunities
+                    </div>
                     <h1 class="hero-title">
-                        <span class="greeting">Hello, I'm</span>
+                        <span class="greeting">👋 Hello, I'm</span>
                         <span class="name">Harshavardhan Kale</span>
-                        <span class="title">Software Engineer</span>
+                        <span class="title"><span id="typed-role">Software Engineer</span><span
+                                class="title-cursor"></span></span>
                     </h1>
                     <p class="hero-description">
-                        Passionate Computer Engineering student at COEP Technological University, Pune.
-                        Building innovative solutions with modern technologies.
+                        Final-year Computer Engineering student at <strong>COEP Technological University</strong>.
+                        Currently interning at <strong>Pine Labs</strong>.
+                        Passionate about systems, full-stack web, and machine learning.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> View My Work
+                        </a>
                         <a href="./assets/filedata/Harshavardhan_kale_Btech_HSBC.pdf" class="btn btn-secondary"
                             target="_blank">
-                            <i class="fas fa-download"></i> Download Resume
+                            <i class="fas fa-download"></i> Resume
                         </a>
                     </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">756+</span>
+                            <span class="hero-stat-label">LeetCode Problems</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">10+</span>
+                            <span class="hero-stat-label">Projects</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">3</span>
+                            <span class="hero-stat-label">Internships</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Image -->
                 <div class="hero-image">
                     <div class="profile-container">
+                        <div class="profile-ring"></div>
                         <img src="./assets/img/jpg/image.png" alt="Harshavardhan Kale" class="profile-image">
                         <div class="profile-glow"></div>
+
+                        <!-- Floating Badges -->
+                        <div class="floating-badge badge-coep">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>COEP Pune</span>
+                        </div>
+                        <div class="floating-badge badge-intern">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Pine Labs Intern</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-scroll">
-                <a href="#about" class="scroll-indicator">
-                    <span>Scroll Down</span>
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
         </div>
-        <div class="hero-background">
-            <div class="particles"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ── About ── -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-animate">
+                <div class="section-tag"><i class="fas fa-user-astronaut"></i> Profile</div>
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <p class="section-subtitle">A passionate engineer who loves building things that matter</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm <strong>Harshavardhan Prataprao Kale</strong>, a Final-year <strong>Computer
-                            Engineering</strong>
-                        student at <strong>COEP Technological University, Pune</strong>. With a strong foundation in
-                        programming languages like <strong>C++</strong>, <strong>C</strong>, and
-                        <strong>Python</strong>,
-                        I've developed expertise in both front-end and back-end development.
-                    </p>
-                    <p>
-                        My passion lies in creating innovative solutions and staying at the forefront of technology.
-                        I'm particularly interested in machine learning and web development, constantly exploring new
-                        frameworks and methodologies to enhance my skills.
-                    </p>
-                    <div class="about-stats">
 
-                        <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Projects Completed</span>
+            <div class="about-content">
+                <div class="about-text scroll-animate-left">
+                    <p>
+                        I'm <strong>Harshavardhan Prataprao Kale</strong>, a final-year <strong>Computer
+                            Engineering</strong> student
+                        at <strong>COEP Technological University, Pune</strong>. I thrive at the intersection of robust
+                        engineering
+                        and creative problem-solving.
+                    </p>
+                    <p>
+                        From building a high-throughput <strong>C++ Database Engine</strong> to leading a full-stack
+                        team at a startup, I love challenging myself across domains — systems programming, web
+                        development,
+                        machine learning, and fintech infrastructure.
+                    </p>
+                    <p>
+                        Currently contributing to <strong>Pine Labs'</strong> backend infrastructure using Java,
+                        while wrapping up my B.Tech with a strong focus on <strong>System Design</strong> and
+                        <strong>DSA</strong>.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>MHT-CET 99.81 percentile · HSC 94.83%</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Technologies</span>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>LeetCode 1682 rating · Top 14.4%</span>
+                        </div>
+                       
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Led 4-member team · 2,200+ users served</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right scroll-animate-right">
+                    <div class="about-stats-grid">
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Internships</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">756+</div>
+                            <div class="stat-label">LC Solved</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">99.81</div>
+                            <div class="stat-label">CET %ile</div>
+                        </div>
+                    </div>
+
+                    <div class="cp-card glass-card">
+                        <div class="cp-title"><i class="fas fa-code"></i> &nbsp;Competitive Programming</div>
+                        <div class="cp-item">
+                            <span class="cp-item-label">LeetCode Rating</span>
+                            <span class="cp-item-val">1682</span>
+                        </div>
+                        <div class="cp-item">
+                            <span class="cp-item-label">Problems Solved</span>
+                            <span class="cp-item-val">756+ 🟡</span>
+                        </div>
+                        <div class="cp-item">
+                            <span class="cp-item-label">GFG Problems</span>
+                            <span class="cp-item-val">200+</span>
+                        </div>
+                        <div class="cp-item">
+                            <span class="cp-item-label">GFG Institute Rank</span>
+                            <span class="cp-item-val mb-0">Top 5%</span>
                         </div>
                     </div>
                 </div>
@@ -137,254 +231,327 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ── Education ── -->
     <section id="education" class="education">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-animate">
+                <div class="section-tag"><i class="fas fa-graduation-cap"></i> Academia</div>
                 <h2 class="section-title">Education</h2>
-                <p class="section-subtitle">My academic journey</p>
+                <p class="section-subtitle">My academic foundation and journey</p>
             </div>
-            <div class="education-content">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3 class="education-degree">B.Tech in Computer Engineering</h3>
-                        <p class="education-institution">COEP Technological University, Pune</p>
-                        <p class="education-duration">Nov 2022 – Jun 2026</p>
-                        <p class="education-description">
-                            Currently pursuing Computer Engineering with focus on software development,
-                            data structures, algorithms, and modern web technologies.
-                        </p>
-                        <div class="education-highlights">
-                            <span class="highlight-tag">Computer Engineering</span>
-                            <span class="highlight-tag">Data Structures</span>
-                            <span class="highlight-tag">Algorithms</span>
-                            <span class="highlight-tag">Database Systems</span>
-                        </div>
+
+            <div class="education-timeline scroll-animate">
+                <div class="edu-timeline-line"></div>
+
+                <div class="edu-item glass-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date"><i class="fas fa-calendar-alt"></i> &nbsp;Nov 2022 – Jun 2026</div>
+                    <h3 class="edu-degree">B.Tech in Computer Engineering</h3>
+                    <p class="edu-school">COEP Technological University, Pune</p>
+                    <div class="edu-tags">
+                        <span class="tag tag-cyan">Computer Engineering</span>
+                        <span class="tag tag-purple">Data Structures & Algorithms</span>
+                        <span class="tag tag-cyan">Database Systems</span>
+                        <span class="tag tag-purple">System Design</span>
+                        <span class="tag tag-green">MHT-CET 99.81 Percentile</span>
                     </div>
                 </div>
 
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3 class="education-degree">Higher Secondary Education (12th)</h3>
-                        <p class="education-institution">Samarth Madhyamik va Uchhamadhyamik Vidyalay, Karjat</p>
-                        <p class="education-duration">Jun 2020 – Dec 2021</p>
-                        <p class="education-description">
-                            Completed 12th standard with Science stream, focusing on Mathematics,
-                            Physics, and Computer Science fundamentals.
-                        </p>
-                        <div class="education-highlights">
-                            <span class="highlight-tag">Percentage: 94.83%</span>
-                            <span class="highlight-tag">Science Stream</span>
-                        </div>
+                <div class="edu-item glass-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date"><i class="fas fa-calendar-alt"></i> &nbsp;Jun 2020 – Dec 2021</div>
+                    <h3 class="edu-degree">Higher Secondary Education (12th)</h3>
+                    <p class="edu-school">Samarth Madhyamik va Uchhamadhyamik Vidyalay, Karjat</p>
+                    <div class="edu-tags">
+                        <span class="tag tag-warn">HSC Score: 94.83%</span>
+                        <span class="tag tag-cyan">Science Stream</span>
+                        <span class="tag tag-purple">Mathematics · Physics · CS</span>
                     </div>
                 </div>
 
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3 class="education-degree">Secondary Education (10th)</h3>
-                        <p class="education-institution">Dynamic English School, Karjat</p>
-                        <p class="education-duration">Jun 2018 – May 2019</p>
-                        <p class="education-description">
-                            Completed secondary education with strong foundation in core subjects.
-                        </p>
-                        <div class="education-highlights">
-                            <span class="highlight-tag">Percentage: 91.20%</span>
-                            <span class="highlight-tag">Core Subjects</span>
-                        </div>
+                <div class="edu-item glass-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date"><i class="fas fa-calendar-alt"></i> &nbsp;Jun 2018 – May 2019</div>
+                    <h3 class="edu-degree">Secondary Education (10th)</h3>
+                    <p class="edu-school">Dynamic English School, Karjat</p>
+                    <div class="edu-tags">
+                        <span class="tag tag-warn">SSC Score: 91.20%</span>
+                        <span class="tag tag-cyan">Core Subjects</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ── Experience ── -->
     <section id="experience" class="experience">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-animate">
+                <div class="section-tag"><i class="fas fa-briefcase"></i> Career</div>
                 <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My professional journey</p>
+                <p class="section-subtitle">Where I've worked and what I've built</p>
             </div>
-            <div class="experience-content">
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="experience-content-wrapper">
-                        <div class="experience-details">
-                            <h3 class="experience-title">Product Development Intern</h3>
-                            <p class="experience-company">Schaeffler Technology Solution</p>
-                            <p class="experience-duration">Jun 2025 – Aug 2025</p>
-                            <p class="experience-description">
-                                Developed automated PowerShell scripts for server configuration, reducing provisioning
-                                time from days to few hours.
-                                Standardized environment configuration across 4+ servers, reducing deployment failures
-                                by 40%.
-                            </p>
-                            <div class="experience-tech">
-                                <span class="tech-tag">PowerShell</span>
-                                <span class="tech-tag">Server Configuration</span>
-                                <span class="tech-tag">Automation</span>
-                                <span class="tech-tag">Deployment</span>
+
+            <div class="experience-wrapper">
+
+                <!-- Pine Labs — Current -->
+                <div class="exp-card glass-card scroll-animate">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <div class="exp-role">Software Development Intern</div>
+                            <div class="exp-company">
+                                <i class="fas fa-building"></i> Pine Labs
                             </div>
                         </div>
+                        <div class="exp-meta">
+                            <span class="badge-live">Current</span>
+                            <span class="exp-date">Jan 2026 – Present</span>
+                        </div>
+                    </div>
+                    <ul class="exp-points">
+                        <li>Contributing to backend development for fintech payment infrastructure using
+                            <strong>Java</strong></li>
+                        <li>Working on database management and API design for high-throughput transaction services</li>
+                        <li>Collaborating with cross-functional teams on scalable, RBI-compliant payment systems</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span class="tag tag-cyan">Java</span>
+                        <span class="tag tag-purple">Backend Systems</span>
+                        <span class="tag tag-cyan">Database Management</span>
+                        <span class="tag tag-purple">API Design</span>
+                        <span class="tag tag-green">Fintech</span>
                     </div>
                 </div>
 
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="experience-content-wrapper">
-                        <div class="experience-details">
-                            <h3 class="experience-title">Lead Developer Intern</h3>
-                            <p class="experience-company">Mirai (Startup, BuildUp Internships)</p>
-                            <p class="experience-duration">Dec 2025 – May 2025</p>
-                            <p class="experience-description">
-                                Led a 4-member development team to create "Mirai" — a MERN-based career guidance
-                                platform.
-                                Integrated strength-based assessment, career domain recommendations, and real-time
-                                analytics dashboards.
-                                Increased user engagement by 35% during pilot testing with 200+ students.
-                            </p>
-                            <div class="experience-tech">
-                                <span class="tech-tag">MERN Stack</span>
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Team Leadership</span>
+                <!-- Mirai -->
+                <div class="exp-card glass-card scroll-animate">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <div class="exp-role">Lead Developer Intern</div>
+                            <div class="exp-company">
+                                <i class="fas fa-rocket"></i> Mirai — BuildUp Global
                             </div>
                         </div>
+                        <div class="exp-meta">
+                            <span class="exp-date">May 2025 – Sep 2025</span>
+                        </div>
+                    </div>
+                    <ul class="exp-points">
+                        <li>Led a 4-member development team to build "Mirai" — a MERN-based career guidance platform
+                        </li>
+                        <li>Served <strong>2,200+ students</strong> with strength-based assessments, domain
+                            recommendations & analytics dashboards</li>
+                        <li>Increased user engagement by <strong>35%</strong> during pilot testing; integrated Redis
+                            caching on GCP</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span class="tag tag-cyan">React.js</span>
+                        <span class="tag tag-purple">Node.js</span>
+                        <span class="tag tag-cyan">MongoDB</span>
+                        <span class="tag tag-purple">Redis</span>
+                        <span class="tag tag-green">GCP</span>
+                        <span class="tag tag-cyan">Express.js</span>
                     </div>
                 </div>
+
+                <!-- Schaeffler -->
+                <div class="exp-card glass-card scroll-animate">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <div class="exp-role">Product Development Intern</div>
+                            <div class="exp-company">
+                                <i class="fas fa-industry"></i> Schaeffler Technology Solutions
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-date">Jun 2025 – Aug 2025</span>
+                        </div>
+                    </div>
+                    <ul class="exp-points">
+                        <li>Automated Windows server provisioning via PowerShell, reducing deployment time by
+                            <strong>90%</strong> (2 days → 4 hours)</li>
+                        <li>Standardized configuration across <strong>4+ servers</strong>, eliminating 40% of
+                            configuration errors</li>
+                        <li>Documented processes on Confluence, enabling seamless team knowledge transfer</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span class="tag tag-cyan">PowerShell</span>
+                        <span class="tag tag-purple">Windows Server</span>
+                        <span class="tag tag-cyan">IIS</span>
+                        <span class="tag tag-purple">Confluence</span>
+                        <span class="tag tag-green">Automation</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ── Skills ── -->
     <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-animate">
+                <div class="section-tag"><i class="fas fa-microchip"></i> Tech Stack</div>
                 <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies I work with</p>
+                <p class="section-subtitle">Technologies, tools & frameworks I work with</p>
             </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-cplusplus-plain colored"></i>
-                            <span>C++</span>
+
+            <div class="skills-content">
+
+                <!-- Languages -->
+                <div class="skill-cat-card glass-card scroll-animate">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-code"></i></div>
+                        <div class="cat-title">Programming Languages</div>
+                    </div>
+                    <div class="skills-pills">
+                        <div class="skill-pill"><i class="devicon-cplusplus-plain colored"></i> C++</div>
+                        <div class="skill-pill"><i class="devicon-c-plain colored"></i> C</div>
+                        <div class="skill-pill"><i class="devicon-python-plain colored"></i> Python</div>
+                        <div class="skill-pill"><i class="devicon-java-plain colored"></i> Java</div>
+                        <div class="skill-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                        <div class="skill-pill"><i class="devicon-dart-plain colored"></i> Dart</div>
+                        <div class="skill-pill"><i class="devicon-html5-plain colored"></i> HTML5</div>
+                        <div class="skill-pill"><i class="devicon-css3-plain colored"></i> CSS3</div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-cat-card glass-card scroll-animate">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-desktop"></i></div>
+                        <div class="cat-title">Frontend & Mobile</div>
+                    </div>
+                    <div class="skills-pills">
+                        <div class="skill-pill"><i class="devicon-react-plain colored"></i> React.js</div>
+                        <div class="skill-pill"><i class="devicon-flutter-plain colored"></i> Flutter</div>
+                        <div class="skill-pill"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+                        <div class="skill-pill"><i class="devicon-react-plain colored"></i> React Native</div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-cat-card glass-card scroll-animate">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-server"></i></div>
+                        <div class="cat-title">Backend & Frameworks</div>
+                    </div>
+                    <div class="skills-pills">
+                        <div class="skill-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+                        <div class="skill-pill"><i class="devicon-express-original"></i> Express.js</div>
+                        <div class="skill-pill"><i class="devicon-django-plain colored"></i> Django</div>
+                        <div class="skill-pill"><i class="devicon-flask-original"></i> Flask</div>
+                        <div class="skill-pill"><i class="fas fa-cubes" style="color:#f59e0b"></i> REST APIs</div>
+                    </div>
+                </div>
+
+                <!-- Databases & Cloud -->
+                <div class="skill-cat-card glass-card scroll-animate">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-database"></i></div>
+                        <div class="cat-title">Databases & Cloud</div>
+                    </div>
+                    <div class="skills-pills">
+                        <div class="skill-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+                        <div class="skill-pill"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                        <div class="skill-pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+                        <div class="skill-pill"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+                        <div class="skill-pill"><i class="devicon-redis-plain colored"></i> Redis</div>
+                        <div class="skill-pill"><i class="devicon-googlecloud-plain colored"></i> GCP</div>
+                        <div class="skill-pill"><i class="devicon-amazonwebservices-plain colored"></i> AWS</div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-cat-card glass-card scroll-animate">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-tools"></i></div>
+                        <div class="cat-title">Tools & Platforms</div>
+                    </div>
+                    <div class="skills-pills">
+                        <div class="skill-pill"><i class="devicon-git-plain colored"></i> Git</div>
+                        <div class="skill-pill"><i class="devicon-github-original"></i> GitHub</div>
+                        <div class="skill-pill"><i class="devicon-docker-plain colored"></i> Docker</div>
+                        <div class="skill-pill"><i class="fas fa-terminal" style="color:#6d97c0;"></i> PowerShell</div>
+                        <div class="skill-pill"><i class="fas fa-vial" style="color:#ef4444;"></i> Postman</div>
+                        <div class="skill-pill"><i class="devicon-visualstudio-plain colored"></i> VS Code</div>
+                        <div class="skill-pill"><i class="fab fa-github-actions" style="color:#2188ff;"></i> GitHub
+                            Actions</div>
+                    </div>
+                </div>
+
+                <!-- Core -->
+                <div class="skill-cat-card glass-card scroll-animate">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-brain"></i></div>
+                        <div class="cat-title">Core Competencies</div>
+                    </div>
+                    <div class="skills-pills">
+                        <div class="skill-pill"><i class="fas fa-sitemap" style="color:#a855f7;"></i> System Design
                         </div>
-                        <div class="skill-item">
-                            <i class="devicon-c-plain colored"></i>
-                            <span>C</span>
+                        <div class="skill-pill"><i class="fas fa-project-diagram" style="color:#00d4ff;"></i> Data
+                            Structures & Algorithms</div>
+                        <div class="skill-pill"><i class="fas fa-network-wired" style="color:#10b981;"></i> RESTful API
+                            Design</div>
+                        <div class="skill-pill"><i class="fas fa-boxes" style="color:#f59e0b;"></i> OOP</div>
+                        <div class="skill-pill"><i class="fas fa-cloud" style="color:#6d97c0;"></i> Cloud Computing
                         </div>
-                        <div class="skill-item">
-                            <i class="devicon-python-plain colored"></i>
-                            <span>Python</span>
+                        <div class="skill-pill"><i class="fas fa-robot" style="color:#a855f7;"></i> Machine Learning
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3 class="category-title">Frontend Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-react-plain-wordmark colored"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-html5-plain-wordmark colored"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-css3-plain-wordmark colored"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-bootstrap-plain-wordmark colored"></i>
-                            <span>Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">Backend Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-nodejs-plain colored"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-django-plain colored"></i>
-                            <span>Django</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-flask-original-wordmark"></i>
-                            <span>Flask</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">Databases</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-mongodb-plain-wordmark colored"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-mysql-plain-wordmark colored"></i>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">Tools & Platforms</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-git-plain-wordmark colored"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-github-original-wordmark"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-visualstudio-plain colored"></i>
-                            <span>VS Code</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ── Projects ── -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-animate">
+                <div class="section-tag"><i class="fas fa-layer-group"></i> Portfolio</div>
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <p class="section-subtitle">A selection of things I've built — from systems to full-stack apps</p>
             </div>
+
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
+
+                <!-- Credit+ -->
+                <div class="project-card scroll-animate">
+                    <div class="project-header">
+                        <img src="./assets/img/credit+.png" alt="Credit+ AI Credit Suite" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Credit+ — AI Credit Orchestration Suite</h3>
+                        <p class="project-description">
+                            RAG + Agentic AI system for intelligent loan decisions with sub-5s latency and RBI
+                            compliance-override safety. Multi-modal credit analysis.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS Bedrock</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Engine -->
+                <div class="project-card scroll-animate">
                     <div class="project-header">
                         <img src="./assets/img/jpg/cpp.webp" alt="Database Engine in C++" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link">
+                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link"
+                                    aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -393,86 +560,86 @@
                     <div class="project-content">
                         <h3 class="project-title">Database Engine in C++</h3>
                         <p class="project-description">
-                            Designed a SQL-compatible engine supporting CRUD, B-tree indexing, and write-ahead logging.
-                            Achieved 3K QPS and 70% faster recovery after crashes. Built with C++ and Crow
-                            Microframework.
+                            SQL-compatible relational DB engine with ACID transactions, B-tree indexing, write-ahead
+                            logging, and MVCC. Achieved 3K QPS and 70% faster crash recovery.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">C++</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">B-tree Indexing</span>
-                            <span class="tech-tag">Crow Microframework</span>
+                            <span class="tech-tag">B-Tree</span>
+                            <span class="tech-tag">WAL</span>
+                            <span class="tech-tag">MVCC</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card">
+
+                <!-- COEP-Placement-Matrix -->
+                <div class="project-card scroll-animate">
                     <div class="project-header">
-                        <img src="./assets/img/jpg/matrix.png" alt="Coep-Placement-Matrix  Mern App"
-                            class="project-image">
+                        <img src="./assets/img/jpg/matrix.png" alt="COEP Placement Matrix" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/kaleharshavardhan07/COEP-connect.git"
-                                    target="_blank" class="project-link">
+                                <a href="https://github.com/kaleharshavardhan07/COEP-connect.git" target="_blank"
+                                    class="project-link" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://coep-connect.vercel.app/" target="_blank" class="project-link">
+                                <a href="https://coep-connect.vercel.app/" target="_blank" class="project-link"
+                                    aria-label="Live Demo">
                                     <i class="fa-solid fa-globe"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Coep-Placement-Matrix  Mern App</h3>
+                        <h3 class="project-title">COEP Placement Matrix — MERN App</h3>
                         <p class="project-description">
-                            COEP Connect is a placement network platform exclusively for College of Engineering Pune (COEP) students. It's designed to help students share and access placement experiences, interview insights, and career guidance.
+                            Exclusive placement network for COEP students to share interview experiences, insights, and
+                            career guidance. Live on Vercel.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node</span>
+                            <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">MongoDB</span>
                             <span class="tech-tag">Express.js</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card">
+
+                <!-- COEP-Connect Flask -->
+                <div class="project-card scroll-animate">
                     <div class="project-header">
-                        <img src="./assets/img/jpg/project1.png" alt="Coep-connect — Flask Web App"
-                            class="project-image">
+                        <img src="./assets/img/jpg/project1.png" alt="COEP Connect Flask" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/kaleharshavardhan07/COEP_CONNECT-RPPOOP_Project/blob/main/README.md"
-                                    target="_blank" class="project-link">
+                                    target="_blank" class="project-link" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Coep-connect — Flask Web App</h3>
+                        <h3 class="project-title">COEP-Connect — Flask Social Platform</h3>
                         <p class="project-description">
-                            Developed a Flask-based social media platform for students to connect within the college
-                            community.
-                            Enabled posting of polls with options to post under real name or anonymously. Built a unique
-                            "Connect to People" feature.
+                            College social media platform with anonymous polling, "Connect to People" feature,
+                            interest-based recommendation algorithm, and WebSocket-powered real-time chat.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
                             <span class="tech-tag">Flask</span>
                             <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">HTML/CSS/JavaScript</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">Python</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
+                <!-- Sentiment Analysis -->
+                <div class="project-card scroll-animate">
                     <div class="project-header">
-                        <img src="./assets/img/jpg/ml.jpeg" alt="Sentiment Analysis — ML Model" class="project-image">
+                        <img src="./assets/img/jpg/ml.jpeg" alt="Sentiment Analysis ML" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link">
+                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link"
+                                    aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -481,58 +648,30 @@
                     <div class="project-content">
                         <h3 class="project-title">Sentiment Analysis — ML Model</h3>
                         <p class="project-description">
-                            Built a multi-class sentiment classifier (positive/neutral/negative) achieving 85% accuracy
-                            using Logistic
-                            Regression on balanced Twitter data. Implemented with NLTK, Scikit-learn, and
-                            TF-IDF/CountVectorizer.
+                            Multi-class sentiment classifier (positive/neutral/negative) achieving 85% accuracy using
+                            Logistic Regression on balanced Twitter data with TF-IDF/CountVectorizer.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLTK</span>
                             <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">NLTK</span>
+                            <span class="tech-tag">TF-IDF</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <img src="./assets/img/jpg/att.png" alt="Automated Attendance System" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated Attendance System with Facial Recognition</h3>
-                        <p class="project-description">
-                            Built a full-stack system for automated attendance using real-time face detection.
-                            Integrated role-based access control for teachers and administrators with MongoDB backend.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Face Recognition</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card">
+                <!-- EXPITA-O -->
+                <div class="project-card scroll-animate">
                     <div class="project-header">
                         <img src="./assets/img/jpg/expence.jpg" alt="EXPITA-O Expense Manager" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="./assets/filedata/app-release.apk" download="Expito.apk" class="project-link">
+                                <a href="./assets/filedata/app-release.apk" download="Expito.apk" class="project-link"
+                                    aria-label="Download APK">
                                     <i class="fas fa-download"></i>
                                 </a>
-                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link">
+                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link"
+                                    aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -541,8 +680,8 @@
                     <div class="project-content">
                         <h3 class="project-title">EXPITA-O Expense Manager</h3>
                         <p class="project-description">
-                            An expense management app with data visualization using graphs and automated suggestions
-                            using Gemini API. Built with Flutter and Dart for cross-platform compatibility.
+                            Cross-platform expense manager with data visualization, automated budgeting suggestions
+                            powered by Gemini AI, and local-first Hive storage.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Flutter</span>
@@ -553,15 +692,14 @@
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card">
+                <!-- Multithreaded Downloader -->
+                <div class="project-card scroll-animate">
                     <div class="project-header">
-                        <img src="./assets/img/jpg/cpp.webp" alt="Multithreaded File Downloader"
-                            class="project-image">
+                        <img src="./assets/img/jpg/cpp.webp" alt="Multithreaded File Downloader" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/kaleharshavardhan07/Multi_thread_File_downloader/blob/main/readme.md"
-                                    target="_blank" class="project-link">
+                                    target="_blank" class="project-link" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -570,8 +708,8 @@
                     <div class="project-content">
                         <h3 class="project-title">Multithreaded File Downloader</h3>
                         <p class="project-description">
-                            A C++ multithreaded file downloader that utilizes the cURL library to download large files
-                            in parts concurrently and merge them for greater download speeds.
+                            High-performance C++ file downloader using cURL and multithreading to download large files
+                            in concurrent chunks — significantly improved download speeds.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">C++</span>
@@ -581,69 +719,110 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Attendance System -->
+                <div class="project-card scroll-animate">
+                    <div class="project-header">
+                        <img src="./assets/img/jpg/att.png" alt="Automated Attendance System" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/kaleharshavardhan07/" target="_blank" class="project-link"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Attendance — Facial Recognition</h3>
+                        <p class="project-description">
+                            Full-stack attendance system with real-time face detection, role-based access for
+                            teachers/admins, and MongoDB backend for persistent records.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ── Contact ── -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-animate">
+                <div class="section-tag"><i class="fas fa-satellite-dish"></i> Connect</div>
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Ready to collaborate? Let's connect!</p>
+                <p class="section-subtitle">Open to opportunities, collaborations, and good conversations</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
+
+            <div class="contact-grid">
+                <div class="contact-info-stack scroll-animate-left">
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail">
                             <h3>Email</h3>
                             <p>kaleharshavardhan07@gmail.com</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <!-- <div class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-detail">
+                            <h3>Phone</h3>
+                            <p>+91 81778 76465</p>
                         </div>
-                        <div class="contact-details">
+                    </div> -->
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-detail">
                             <h3>Location</h3>
                             <p>Pune, Maharashtra, India</p>
                         </div>
                     </div>
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="contact-detail">
+                            <h3>Status</h3>
+                            <p>Software Dev Intern @ Pine Labs</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="social-links">
-                    <h3>Connect with me</h3>
-                    <div class="social-grid">
+
+                <div class="social-card glass-card scroll-animate-right">
+                    <div class="social-title"><i class="fas fa-share-alt"></i> &nbsp;Socials</div>
+                    <div class="social-grid-inner">
                         <a href="https://linkedin.com/in/kaleharshavardhan07" target="_blank"
-                            class="social-link linkedin">
+                            class="social-link linkedin" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                             <span>LinkedIn</span>
                         </a>
-                        <a href="https://github.com/kaleharshavardhan07" target="_blank" class="social-link github">
+                        <a href="https://github.com/kaleharshavardhan07" target="_blank" class="social-link github"
+                            aria-label="GitHub">
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
                         </a>
-                        <a href="https://leetcode.com/kaleharshavardhan07" target="_blank" class="social-link leetcode">
+                        <a href="https://leetcode.com/kaleharshavardhan07" target="_blank" class="social-link leetcode"
+                            aria-label="LeetCode">
                             <i class="fas fa-code"></i>
                             <span>LeetCode</span>
                         </a>
                         <a href="https://www.hackerrank.com/profile/Harshavardhan07" target="_blank"
-                            class="social-link hackerrank">
+                            class="social-link hackerrank" aria-label="HackerRank">
                             <i class="fas fa-terminal"></i>
                             <span>HackerRank</span>
                         </a>
-                        <a href="https://facebook.com/kaleharshavardhan07" target="_blank" class="social-link facebook">
-                            <i class="fab fa-facebook"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="https://x.com/Kale_harsh07" target="_blank" class="social-link twitter">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://x.com/Kale_harsh07" target="_blank" class="social-link twitter"
+                            aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
                             <span>Twitter</span>
                         </a>
                         <a href="https://instagram.com/kale_harshavardhan_07" target="_blank"
-                            class="social-link instagram">
+                            class="social-link instagram" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                             <span>Instagram</span>
                         </a>
@@ -653,12 +832,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ── Footer ── -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 <strong>Harshavardhan Prataprao Kale</strong>. All rights reserved.</p>
-                <!-- <p>Built with ❤️ and lots of ☕</p> -->
+                <p>&copy; 2026 <strong>Harshavardhan Prataprao Kale</strong>. All rights reserved. Built with passion ⚡
+                </p>
             </div>
         </div>
     </footer>
